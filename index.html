@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WD. | Web Design</title>
+<meta name="description" content="お店の魅力を伝えるホームページ制作。WDの自己紹介サイトです。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f4ee;--paper:#fffefa;--ink:#28241f;--muted:#81796f;--line:#ded8ce;--accent:#8a7660}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",sans-serif;font-weight:300;letter-spacing:.04em}
+a{color:inherit;text-decoration:none}
+header{height:88px;padding:0 8vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.logo{font:400 35px "Cormorant Garamond",serif;letter-spacing:.08em}
+nav{display:flex;gap:30px;font-size:10px;letter-spacing:.17em}
+nav a:hover,.text-link:hover{opacity:.55}
+.hero{min-height:650px;display:flex;align-items:center;padding:90px 12vw;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:520px;height:520px;border:1px solid #e3ddd3;border-radius:50%;right:-90px;top:65px}
+.hero-inner{position:relative;z-index:1;max-width:760px}
+.eyebrow{font-size:10px;letter-spacing:.3em;color:var(--accent);margin-bottom:30px}
+h1{font:400 clamp(76px,12vw,150px)/.82 "Cormorant Garamond",serif;letter-spacing:-.04em;margin:0 0 30px}
+.hero-ja{font-size:clamp(19px,2.5vw,27px);line-height:1.8;letter-spacing:.1em;margin-bottom:18px}
+.hero-copy{font-size:12px;line-height:2.4;color:var(--muted);max-width:490px}
+.hero-bottom{margin-top:42px;display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--ink);color:#fffefa;padding:16px 25px;font-size:10px;letter-spacing:.16em}
+.text-link{font-size:10px;letter-spacing:.16em;border-bottom:1px solid var(--ink);padding-bottom:8px}
+.section{padding:105px 10vw}
+.section-head{text-align:center;margin-bottom:55px}
+.kicker{font:400 17px "Cormorant Garamond",serif;color:var(--accent);letter-spacing:.2em}
+h2{font:400 54px "Cormorant Garamond",serif;margin:5px 0 12px}
+.sub{font-size:10px;color:var(--muted);letter-spacing:.16em}
+.about{background:var(--paper)}
+.about-grid{max-width:1000px;margin:auto;display:grid;grid-template-columns:.8fr 1.2fr;gap:9vw;align-items:center}
+.monogram{aspect-ratio:1;display:grid;place-items:center;border:1px solid #cfc6b9;border-radius:50%;font:400 clamp(90px,13vw,160px) "Cormorant Garamond",serif;letter-spacing:-.08em;background:var(--bg)}
+.about-text h3{font-size:21px;font-weight:400;line-height:1.8;margin:0 0 20px}
+.about-text p{font-size:12px;line-height:2.5;color:#71695f;margin:0}
+.values{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1000px;margin:55px auto 0}
+.value{border-top:1px solid var(--line);padding:22px 10px}
+.value b{font:400 23px "Cormorant Garamond",serif}
+.value p{font-size:11px;color:var(--muted);line-height:2}
+.service{background:#eee9e0}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1000px;margin:auto}
+.service-item{padding:28px 24px;background:rgba(255,254,250,.72);border:1px solid #e2dbd0}
+.service-item .num{font:400 25px "Cormorant Garamond",serif;color:var(--accent)}
+.service-item h3{font-size:15px;font-weight:400;margin:18px 0 10px}
+.service-item p{font-size:11px;line-height:2.2;color:var(--muted);margin:0}
+.contact{background:#292620;color:#f8f4ec;text-align:center}
+.contact .kicker{color:#c7b69f}
+.contact p{font-size:12px;line-height:2.3;color:#d0c8bd}
+.contact .btn{background:#f8f4ec;color:#292620;margin-top:20px}
+footer{padding:28px 8vw;text-align:center;color:var(--muted);font-size:9px;letter-spacing:.16em}
+@media(max-width:700px){
+ header{height:auto;padding:18px 6vw;display:block;text-align:center}
+ .logo{font-size:30px}
+ nav{justify-content:center;gap:18px;margin-top:12px;font-size:9px}
+ .hero{min-height:570px;padding:80px 8vw}
+ .hero:after{width:320px;height:320px;right:-190px;top:70px}
+ .section{padding:75px 7vw}
+ h2{font-size:44px}
+ .about-grid{grid-template-columns:1fr;gap:35px}
+ .monogram{max-width:240px;margin:auto}
+ .values,.service-grid{grid-template-columns:1fr;gap:12px}
+}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="#top">WD.</a>
+  <nav>
+    <a href="#about">ABOUT</a>
+    <a href="#service">SERVICE</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+</header>
+<main id="top">
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">WEB DESIGN</div>
+      <h1>WD.</h1>
+      <div class="hero-ja">お店の魅力を、<br>伝わるホームページに。</div>
+      <p class="hero-copy">想いが伝わる、シンプルで美しいホームページを。カフェ・美容室・飲食店など、個人店舗や小さなお店に向けたWebサイトを制作しています。</p>
+      <div class="hero-bottom">
+        <a class="btn" href="https://www.instagram.com/homepage.maker/" target="_blank" rel="noopener">INSTAGRAM ↗</a>
+        <a class="text-link" href="#about">ABOUT WD　↓</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about" id="about">
+    <div class="section-head">
+      <div class="kicker">A little introduction</div>
+      <h2>About</h2>
+      <div class="sub">WDについて</div>
+    </div>
+    <div class="about-grid">
+      <div class="monogram">WD</div>
+      <div class="about-text">
+        <h3>Webで、もっと魅力を。</h3>
+        <p>はじめまして。WDです。</p>
+        <p style="margin-top:14px">お店やサービスの魅力を、ホームページを通して届けるお手伝いをしています。</p>
+        <p style="margin-top:14px">お店ごとの雰囲気や大切にしている想いをくみ取り、見る人の心に残るサイトを目指して、ひとつひとつ丁寧に制作します。</p>
+      </div>
+    </div>
+    <div class="values">
+      <div class="value"><b>01 / Design</b><p>お店の個性や世界観に合わせたデザイン。</p></div>
+      <div class="value"><b>02 / Clarity</b><p>必要な情報が見つけやすい、わかりやすい構成。</p></div>
+      <div class="value"><b>03 / Mobile</b><p>スマートフォンでも見やすいレイアウト。</p></div>
+    </div>
+  </section>
+
+  <section class="section service" id="service">
+    <div class="section-head">
+      <div class="kicker">What I do</div>
+      <h2>Service</h2>
+      <div class="sub">制作について</div>
+    </div>
+    <div class="service-grid">
+      <article class="service-item"><div class="num">01</div><h3>ホームページ制作</h3><p>お店の雰囲気やサービスに合わせた、オリジナルのホームページを制作します。</p></article>
+      <article class="service-item"><div class="num">02</div><h3>スマートフォン対応</h3><p>スマートフォンからも見やすく、必要な情報が伝わるページを設計します。</p></article>
+      <article class="service-item"><div class="num">03</div><h3>デザイン相談</h3><p>掲載内容や見せ方など、ご希望を伺いながら一緒に形にしていきます。</p></article>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="kicker">Let's connect</div>
+    <h2>Contact</h2>
+    <p>ホームページ制作のご相談は<br>InstagramのDMからお気軽にどうぞ。</p>
+    <a class="btn" href="https://www.instagram.com/homepage.maker/" target="_blank" rel="noopener">Instagramを見る ↗</a>
+  </section>
+</main>
+<footer>© WD. WEB DESIGN</footer>
+</body>
+</html>
